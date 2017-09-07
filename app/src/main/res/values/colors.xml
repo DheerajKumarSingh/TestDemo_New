@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f7f7f9</color>
+    <color name="colorPrimaryDark">#1e1e23</color>
+    <color name="colorAccent">#f00003</color>
+    <color name="window_background">#f7f7f9</color>
+    <color name="toolbar_background">#f7f7f9</color>
+    <color name="toolbar_background_transperent">#00f7f7f9</color>
+    <color name="background_grey">#EFEFEF</color>
+
+    <color name="text_color_darck" >#1e1e23</color>
+    <color name="tranparent_color">#00000000</color>
+    <color name="red_color">#f00003</color>
+    <color name="light_red_color">#FF1F1F</color>
+    <color name="color_white">#ffffff</color>
+    <color name="devider_color_menu">#DBDCDE</color>
+
+
+    <color name="text_color_normal" >#474749</color>
+    <color name="text_color_dark">#002b41</color>
+    <color name="text_color_red">#f00003</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_aqua">#30CAEE</color>
+
+    <color name="editline_color">#7b7b7d</color>
+    <color name="circle_shadow">#e9e9e9</color>
+    <color name="text_light_grey">#EAEEF7</color>
+
+    <color name="text_grey">#cecece</color>
+    <color name="text_orange">#EB6440</color>
+    <color name="text_brown">#777777</color>
+    <color name="text_brown_dark">#252525</color>
+    <color name="button_green">#89C81C</color>
+
+
+    <color name="image_border_start">#40999393</color>
+    <color name="image_border_end">#ffffff</color>
+    <color name="image_border_center">#bcbcbc</color>
+
+
+
+ <!--   toolbar-->
+    <color name="contact_us_toolbar_color">#50535C</color>
+    <color name="disabled_color">#44000000</color>
+    <color name="error_color">#E7492E</color>
+
+    <!--ratingbar-->
+    <color name="yellow">#FCB201</color>
+    <color name="light_yellow">#FFEBC3</color>
+
+    <color name="like_color_icon">#60BFEF</color>
+
+
+   <!-- color medal type-->
+    <color name="color_gold">#e8ae02</color>
+    <color name="color_silver">#bababa</color>
+    <color name="color_bonze">#e2ad77</color>
+
+
+</resources>

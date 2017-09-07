@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+   >
+    <LinearLayout
+
+
+        android:id="@+id/ll_line"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="#d8d9db"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_50sdp">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+
+         />
+
+    <TextView
+
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:text="Item Name"
+        android:textColor="@color/text_color_normal"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp">
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

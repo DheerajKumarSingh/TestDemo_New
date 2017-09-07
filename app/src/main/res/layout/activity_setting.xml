@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/toolbar"></include>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp">
+                        <com.example.dheeraj.testdemo.font.CustomFontTextView
+                            app:font="@string/font_name_helvetica"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:gravity="center|left"
+                            android:layout_height="match_parent"
+                            android:text="@string/hint_setting"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@android:color/black"
+                        android:layout_height="0.1dp"></LinearLayout>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp">
+                        <com.example.dheeraj.testdemo.font.CustomFontTextView
+                            app:font="@string/font_name_helvetica"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@android:color/black"
+
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:gravity="center|left"
+                            android:layout_height="match_parent"
+                            android:text="@string/hint_edit_basicinfo"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp">
+                    <com.example.dheeraj.testdemo.font.CustomFontTextView
+                        app:font="@string/font_name_helvetica"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:gravity="center|left"
+                        android:layout_height="match_parent"
+                        android:text="@string/hint_giveus_feedback"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@android:color/black"
+                    android:layout_height="0.1dp"></LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp">
+                    <com.example.dheeraj.testdemo.font.CustomFontTextView
+                        app:font="@string/font_name_helvetica"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:gravity="center|left"
+                        android:layout_height="match_parent"
+                        android:text="@string/hint_about_meetvile"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@android:color/black"
+                    android:layout_height="0.1dp"></LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp">
+                    <com.example.dheeraj.testdemo.font.CustomFontTextView
+                        app:font="@string/font_name_helvetica"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:gravity="center|left"
+                        android:layout_height="match_parent"
+                        android:text="@string/hint_privacy_policy"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@android:color/black"
+                    android:layout_height="0.1dp"></LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp">
+                    <com.example.dheeraj.testdemo.font.CustomFontTextView
+                        app:font="@string/font_name_helvetica"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:gravity="center|left"
+                        android:layout_height="match_parent"
+                        android:text="@string/hint_terms_of_use"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:clickable="true"
+                        android:onClick="click_Notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp">
+                        <com.example.dheeraj.testdemo.font.CustomFontTextView
+                            app:font="@string/font_name_helvetica"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:gravity="center|left"
+                            android:layout_height="match_parent"
+                            android:text="@string/hint_notification"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@android:color/black"
+                        android:layout_height="0.1dp"></LinearLayout>
+                    <LinearLayout
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp">
+                        <com.example.dheeraj.testdemo.font.CustomFontTextView
+                            app:font="@string/font_name_helvetica"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:gravity="center|left"
+                            android:layout_height="match_parent"
+                            android:text="@string/hint_hidden_user"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@android:color/black"
+                        android:layout_height="0.1dp"></LinearLayout>
+                    <LinearLayout
+
+                        android:clickable="true"
+                        android:onClick="click_Account_Setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp">
+
+                        <com.example.dheeraj.testdemo.font.CustomFontTextView
+                            app:font="@string/font_name_helvetica"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:gravity="center|left"
+                            android:layout_height="match_parent"
+                            android:text="@string/hint_account_setting"
+                            android:id="@+id/textView" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+package com.example.dheeraj.testdemo.font;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Typeface;
+import android.util.AttributeSet;
+import android.widget.TextView;
+
+import com.example.dheeraj.testdemo.R;
+
+
+/**
+ * Created by DHEERAJ on 6/24/2016.
+ */
+public class CustomFontTextView extends TextView {
+
+    public static final String ANDROID_SCHEMA = "http://schemas.android.com/apk/res/android";
+
+    public CustomFontTextView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        applyCustomFont(context, attrs);
+    }
+
+    public CustomFontTextView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        applyCustomFont(context, attrs);
+    }
+
+    private void applyCustomFont(Context context, AttributeSet attrs) {
+        TypedArray attributeArray = context.obtainStyledAttributes(
+                attrs,
+                R.styleable.CustomFontTextView);
+        String fontName = attributeArray.getString(R.styleable.CustomFontTextView_font);
+        int textStyle = attrs.getAttributeIntValue(ANDROID_SCHEMA, "textStyle", Typeface.NORMAL);
+        Typeface customFont = selectTypeface(context, fontName, textStyle);
+        setTypeface(customFont);
+        attributeArray.recycle();
+    }
+
+    private Typeface selectTypeface(Context context, String fontName, int textStyle) {
+
+        if (fontName.contentEquals(context.getString(R.string.font_name_fontawesome))) {
+            return FontCache.getTypeface("fontawesome-webfont.ttf", context);
+        } else if (fontName.contentEquals(context.getString(R.string.font_name_helvetica))) {
+          /*
+          information about the TextView textStyle:
+          http://developer.android.com/reference/android/R.styleable.html#TextView_textStyle
+          */
+            switch (textStyle) {
+                case Typeface.BOLD: // bold
+                    return FontCache.getTypeface("Helvetica_Neu_Bold.ttf", context);
+                case Typeface.ITALIC: // italic
+                    return FontCache.getTypeface("HelveticaNeue_Thin.ttf", context);
+                case Typeface.BOLD_ITALIC: // bold italic
+                    return FontCache.getTypeface("HelveticaNeue_medium.ttf", context);
+                case Typeface.NORMAL: // regular
+                    return FontCache.getTypeface("HelveticaNeue_Light.ttf", context);
+                default:
+                    return FontCache.getTypeface("HelveticaNeue_Light.ttf", context);
+            }
+        }
+
+
+        else {
+            // no matching font found
+            // return null so Android just uses the standard font (Roboto)
+            return null;
+        }
+    }
+}

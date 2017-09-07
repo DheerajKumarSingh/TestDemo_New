@@ -1,0 +1,23 @@
+<resources>
+<string name="app_name">TestDemo</string>
+<string name="recent_news">Recent news</string>
+<string name="in_news">In news</string>
+<string name="published_date">published date</string>
+<string name="hint_setting">Search Settings</string>
+<string name="hint_giveus_feedback">Give Us Feedback</string>
+<string name="hint_about_meetvile">About Meetville</string>
+<string name="hint_privacy_policy">Privacy Policy</string>
+<string name="hint_terms_of_use">Terms of Use</string>
+<string name="hint_notification">Notifications</string>
+<string name="hint_hidden_user">Hidden Users</string>
+<string name="hint_account_setting">Account Settings</string>
+<string name="hint_edit_basicinfo">Edit Basic Information</string>
+    <string name="hint_change_email" >Change Email</string>
+    <string name="hint_change_password" >Change Password</string>
+    <string name="hint_delete_my_account" >Delete My Account</string>
+    <string name="hint_pushnotification" >Push Notification</string>
+    <string name="font_name_fontawesome" >fontawesome</string>
+    <string name="font_name_helvetica" >font_helvetica</string>
+    <string name="hint_select_Age_Range" >Select Age Range</string>
+    <string name="send_poke_message" >Send a poke message</string>
+</resources>
