@@ -20,12 +20,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dheeraj.testdemo.service.Adapter_User_List;
+import com.example.dheeraj.testdemo.service.Bean_Poke;
 import com.example.dheeraj.testdemo.service.MyBottomSheetDialogFragment;
 import com.example.dheeraj.testdemo.service.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 
 import static com.example.dheeraj.testdemo.R.id.img_cross;
+
 
 /**
  * Created by DHEERAJ on 8/25/2017.
@@ -43,7 +45,7 @@ public class Activity_Profile extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setSupportActionBar(toolbar);
-        fab=(FloatingActionButton)findViewById(R.id.fab);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,15 +58,13 @@ public class Activity_Profile extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.v("floating click","floating click");
+                Log.v("floating click", "floating click");
             }
         });
-   //     setUP_Customized_Collapse();
+        //     setUP_Customized_Collapse();
         //  Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
 
         intialized_bottomsheat();
-
-
 
 
     }
@@ -80,6 +80,7 @@ public class Activity_Profile extends AppCompatActivity {
     private int firstVisiblePosition;
     RecyclerView recyclerview_user_list;
     String share_user;
+
     private void intialized_bottomsheat() {
 
         arrayList_loadmore = new ArrayList<>();
@@ -97,21 +98,58 @@ public class Activity_Profile extends AppCompatActivity {
                     @Override
                     public void onItemClick(View view, int position) {
                         // TODO Handle item click
-                        isopen_bottomsheat = false;
-                        behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                        // isopen_bottomsheat = false;
+                        //behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
                     }
                 })
         );
+
+
+        ArrayList<Bean_Poke> arrayList = new ArrayList<>();
+        Bean_Poke bean_poke = new Bean_Poke();
+        bean_poke.setTitle("You are so hot");
+        bean_poke.setIschecked(false);
+        arrayList.add(bean_poke);
+        /////
+        Bean_Poke bean_poke1 = new Bean_Poke();
+        bean_poke1.setTitle("You are so beautyful");
+        bean_poke1.setIschecked(false);
+        arrayList.add(bean_poke1);
+        ///
+
+        Bean_Poke bean_poke2 = new Bean_Poke();
+        bean_poke2.setTitle("You are so beautyful");
+        bean_poke2.setIschecked(false);
+        arrayList.add(bean_poke2);
+        ///////
+
+        Bean_Poke bean_poke3 = new Bean_Poke();
+        bean_poke3.setTitle("Have a coffee");
+        bean_poke3.setIschecked(false);
+        arrayList.add(bean_poke3);
+        //////
+        Bean_Poke bean_poke4 = new Bean_Poke();
+        bean_poke4.setTitle("Have a drink");
+        bean_poke4.setIschecked(false);
+        arrayList.add(bean_poke4);
+        ////
+
+
+        Bean_Poke bean_poke5 = new Bean_Poke();
+        bean_poke5.setTitle("You r so cute");
+        bean_poke5.setIschecked(false);
+        arrayList.add(bean_poke5);
+
         linearLayoutManager = new LinearLayoutManager(Activity_Profile.this);
         recyclerview_user_list.setLayoutManager(linearLayoutManager);
-        adapter_user_list = new Adapter_User_List(Activity_Profile.this);
+        adapter_user_list = new Adapter_User_List(Activity_Profile.this, arrayList);
         recyclerview_user_list.setAdapter(adapter_user_list);
         adapter_user_list.notifyDataSetChanged();
 
 
         behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
-            public void onStateChanged( View bottomSheet, int newState) {
+            public void onStateChanged(View bottomSheet, int newState) {
                 // React to state change
                 if (behavior instanceof LockableBottomSheetBehavior) {
                     ((LockableBottomSheetBehavior) behavior).setLocked(true);
@@ -120,23 +158,18 @@ public class Activity_Profile extends AppCompatActivity {
                     behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                 }
             }
-
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-
             }
-
-
         });
         img_cross.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.v("lastCheckedPosition", "lastCheckedPosition" + adapter_user_list.lastCheckedPosition);
                 isopen_bottomsheat = false;
                 behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
             }
         });
-
 
         recyclerview_user_list.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -173,10 +206,7 @@ public class Activity_Profile extends AppCompatActivity {
     }
 
     private void task_Load_User_List_Private_Share(int i) {
-
     }
-
-
 /*    private void setUP_Customized_Collapse() {
         final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle("Jeniifer Lorence");
@@ -208,8 +238,7 @@ public class Activity_Profile extends AppCompatActivity {
 
     }*/
 
-    public void click_Bottomsheat(View view)
-    {
+    public void click_Bottomsheat(View view) {
         if (isopen_bottomsheat) {
             behavior.setPeekHeight(0);
             behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
